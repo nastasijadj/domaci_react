@@ -52,7 +52,7 @@
  .card .card__body > .half {
 	 box-sizing: border-box;
 	 padding: 0 15px;
-	 flex: 1 0 50%;
+ 
 }
  .card .card__body .featured_text h1 {
 	 margin: 0;

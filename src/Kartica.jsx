@@ -1,5 +1,5 @@
  
-function Kartica({komad}) {
+function Kartica({komad,uporedi}) {
     return (
         <main><div className="card">
     
@@ -25,7 +25,7 @@ function Kartica({komad}) {
         <div className="card__footer">
            
           <div className="action">
-            <button type="button">Uporedi</button>
+            <button type="button"  onClick={()=>uporedi(komad.id)}>Uporedi</button>
           </div>
         </div>
       </div></main>

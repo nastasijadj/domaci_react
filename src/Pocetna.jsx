@@ -1,10 +1,10 @@
 import Kartica from "./Kartica";
 
  
-function Pocetna({namestaj}) {
+function Pocetna({namestaj,uporedi}) {
   return (
     <div  >
-                {namestaj.map((n)=><Kartica key={n.id} komad={n}></Kartica>)}
+                {namestaj.map((n)=><Kartica key={n.id} komad={n} uporedi={uporedi}></Kartica>)}
     </div>
   );
 }

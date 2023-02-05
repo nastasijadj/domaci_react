@@ -53,14 +53,25 @@ function App() {
     },
 
   ]);
+  const [namestajUporedi,setNamestajUporedi]=useState([]);
+
+  function uporedi(id){
+ 
+    namestaj.forEach((t)=>{
+        if(t.id==id)
+          t.uporedi=1;
+    })
+    let niz =  namestaj.filter((t)=>t.uporedi==1);
+    setNamestajUporedi(niz);
+  }
   return ( 
 
 
       <BrowserRouter className="App">
               <Navbar  ></Navbar>
               <Routes>
-                  <Route path="/" element={ <Pocetna namestaj={namestaj}></Pocetna>}> </Route>
-                  <Route path="/uporedi" element={ <Uporedi namestaj={namestaj}></Uporedi>}> </Route>
+                  <Route path="/" element={ <Pocetna namestaj={namestaj} uporedi={uporedi}></Pocetna>}> </Route>
+                  <Route path="/uporedi" element={ <Uporedi namestaj={namestajUporedi}></Uporedi>}> </Route>
                
 
 
