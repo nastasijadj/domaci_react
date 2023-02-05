@@ -54,7 +54,12 @@ function App() {
 
   ]);
   const [namestajUporedi,setNamestajUporedi]=useState([]);
+  
+  const [sort,setSort]=useState(true);
 
+  function sortiraj(){
+    setSort(!sort);
+  }
   function uporedi(id){
  
     namestaj.forEach((t)=>{
@@ -68,9 +73,9 @@ function App() {
 
 
       <BrowserRouter className="App">
-              <Navbar  ></Navbar>
+              <Navbar   ></Navbar>
               <Routes>
-                  <Route path="/" element={ <Pocetna namestaj={namestaj} uporedi={uporedi}></Pocetna>}> </Route>
+                  <Route path="/" element={ <Pocetna namestaj={namestaj} uporedi={uporedi} sort={sort} sortiraj={sortiraj}></Pocetna>}> </Route>
                   <Route path="/uporedi" element={ <Uporedi namestaj={namestajUporedi}></Uporedi>}> </Route>
                
 
