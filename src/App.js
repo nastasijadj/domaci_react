@@ -1,7 +1,9 @@
  
 import { useState } from 'react';
 import './App.css';
+import Navbar from './Navbar';
 import Pocetna from './Pocetna';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
  
@@ -50,10 +52,22 @@ function App() {
     },
 
   ]);
-  return (
-    <div className="App">
-         <Pocetna namestaj={namestaj}></Pocetna>
-    </div>
+  return ( 
+
+
+      <BrowserRouter className="App">
+              <Navbar  ></Navbar>
+              <Routes>
+                  <Route path="/" element={ <Pocetna namestaj={namestaj}></Pocetna>}> </Route>
+               
+
+
+
+              </Routes>
+             
+            </BrowserRouter>
+        
+     
   );
 }
 
