@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './Navbar';
 import Pocetna from './Pocetna';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Uporedi from './Uporedi';
 
 function App() {
  
@@ -59,6 +60,7 @@ function App() {
               <Navbar  ></Navbar>
               <Routes>
                   <Route path="/" element={ <Pocetna namestaj={namestaj}></Pocetna>}> </Route>
+                  <Route path="/uporedi" element={ <Uporedi namestaj={namestaj}></Uporedi>}> </Route>
                
 
 
